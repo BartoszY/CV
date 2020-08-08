@@ -1,0 +1,119 @@
+// Variables
+$color-primary: #34E9A3;
+
+
+// Resets
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6F6F6;
+
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 845px;
+  margin: auto;
+}
+
+
+
+
+
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 0 45px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  min-height: 290px;
+  background-image: url('../assets/bartosz.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    margin: 5px 0;
+    letter-spacing: 0.02em;
+    font-size: 35px;
+    font-weight: 400;
+
+    strong {
+      font-weight: 700;
+      color: $color-primary;
+    }
+  }
+
+  &__subtitle {
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+
+.main {
+  display: grid;
+  grid-template-columns: 300px auto;
+
+  background-color: #fff;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+
+  &__aside {
+    padding: 45px;
+    background-color: transparentize($color: $color-primary, $amount: .9);
+  }
+
+  &__content {
+    padding: 45px;
+  }
+}
+
+.footer {
+  font-size: 12px;
+  margin-top: 25px;
+  margin-left: 345px;
+
+  a {
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+.heading {
+  position: relative;
+  margin: 25px 0;
+
+  font-weight: 700;
+  font-size: 23px;
+
+  &::before {
+    content: '';
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    background-color: transparentize($color: $color-primary, $amount: .7);
+  }
+}
